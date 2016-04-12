@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Abdul Aleem Khan">
+        
+        <title>Handy</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <style>
+            @font-face {
+                font-family: Lato;
+                src: url(fonts/Lato/Lato-Regular.ttf);
+            }
+            .service_header{
+                margin:0px;
+                margin-top:2px;
+            }
+            .container{
+                background-color:#EEEEEE;
+                width:100%;
+                padding:0px;
+            }
+            .navbar{
+                margin:0px;
+                z-index:0;
+                border-width:0px;
+                position:relative;
+                height:auto;
+            }
+            
+            .navbar-header{
+                background-color:#43D1B9;
+                width:100%;
+                margin-left:0px;
+                margin-right:0px;
+                padding-left:10px;
+                padding-right:10px;
+            }
+            
+            .container > .navbar-header{
+                margin-left:0px;
+                margin-right:0px;
+                position:relative;
+            }
+            html, body{
+                background-color:#EEEEEE;
+                font-family: Lato;
+                min-height:100%;
+            }
+            
+            #hidden_menu{
+                position:fixed;
+                top:0px;
+                width:75%;
+                min-height:100%;
+                z-index:1000;
+                background-color:white;
+                right:0px;
+                margin-top:49px;
+            }
+            .row{
+                margin:0px;
+                background-color:white; 
+                padding:0px;
+                overflow: hidden;
+                border-bottom:1px solid #CECECE;
+            }
+            .row:hover{
+                background-color: #EAEAEA;
+            }
+            
+            #servicelist{
+                border-radius: 5px;
+                margin-bottom:15px;
+                z-index:2500;
+                position:absolute;  
+                margin-top:-40px; 
+                margin-left:10px; 
+                margin-right:10px; 
+            }
+            
+            li> a{
+                text-decoration: none;
+                color:black;
+            } 
+            
+            p{
+                color: #909090;
+            }
+            
+            a>h3{
+                 background-color:#00CCEB;
+            }
+            a>h3:hover{
+                background-color:#017A8C;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="location.html" style="position:relative;top:14px; float:left; z-index:10;">
+                        <img style="height:20px; width:20px;" src="img/back-icon.png" />
+                    </a>
+                    <h4 style="margin:15px; padding-left: 30px; color:white;">Details</h4>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center" style="min-height:100%;">
+           <h5>Got it! Tell us about the job</h5>
+        </div>
+        <textarea style="border-radius:0px;" rows="4" class="form-control" placeholder="Please describe the job in detail."></textarea>
+        <a href="#" style="">
+            <h3 style="position:fixed; bottom:0px; margin:0px; width:100%; height:40px; text-align:center; color:white; line-height:40px;">NEXT</h3>
+        </a>
+        <script>
+            var toggled = false;
+            $( document ).ready(function() {
+                console.log( "ready!" );
+            });
+        </script>
+    </body>
+</head>

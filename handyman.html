@@ -13,6 +13,10 @@
         <script src="js/jquery-ui.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <style>
+            @font-face {
+                font-family: Lato;
+                src: url(fonts/Lato/Lato-Regular.ttf);
+            }
             .service_header{
                 margin:0px;
                 margin-top:2px;
@@ -23,10 +27,10 @@
                 padding:0px;
             }
             .navbar{
-                background-color:#43D1B9;
                 margin:0px;
-                z-index:2000;
+                z-index:0;
                 border-width:0px;
+                position:relative;
             }
             
             .navbar-header{
@@ -41,9 +45,11 @@
             .container > .navbar-header{
                 margin-left:0px;
                 margin-right:0px;
+                position:relative;
             }
             html, body{
-                background-color:background-color:#EEEEEE;
+                background-color:#EEEEEE;
+                font-family: Lato;
             }
             
             #hidden_menu{
@@ -59,134 +65,110 @@
             .row{
                 margin:0px;
                 background-color:white; 
-                padding:0px; 
-                margin-top:5px;
-                border-radius: 5px;
+                padding:0px;
                 overflow: hidden;
-                border-bottom:1px solid silver;
+                border-bottom:1px solid #CECECE;
             }
+            .row:hover{
+                background-color: #EAEAEA;
+            }
+            
+            #servicelist{
+                border-radius: 5px;
+                margin-bottom:15px;
+                z-index:2500;
+                position:absolute;  
+                margin-top:-40px; 
+                margin-left:10px; 
+                margin-right:10px; 
+            }
+            
             li> a{
                 text-decoration: none;
                 color:black;
             } 
+            
+            p{
+                color: #909090;
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default">
             <div class="container">
-                <div class="navbar-header text-center">
-                    <a href="index.html" style="position:relative; float:left; top:9px;">
+                <div class="navbar-header">
+                    <a href="index.html" style="position:relative;top:9px;left:0px;">
                         <img style="height:30px; width:25px;" src="img/back-icon.png" />
                     </a>
-                    <h3 style="position:relative; color:white; margin:0px; padding:0px; top:9px;">Handyman</h3>
-                    
-                    <h2 style="color:white; padding:20px;">
+                    <h4 class="text-center muted" style="position:relative; color:white; margin:0px; padding:0px; top:9px;">
+                        Handyman
+                    </h4>
+                    <h2 class="text-center" style="color:white; padding:20px; margin-top:0px; margin-bottom:50px;">
                         Don't sweat it: our pros bring their own tools
                     </h2>
                 </div>
-                <div style="margin-bottom:20px; text-align:center;">
-                    <img style="width:15%; height:auto; margin-top:-9%;" src="img/icon2.png" />
-                </div>
+                
             </div>
         </nav>
-        <div class="container" style="padding-left:10px; padding-right:10px;">
-            
-            <div class="row" style="padding:10px;">
-                <a href="handyman.html" style="color:black; text-decoration:none;">
-                    <div class="col-xs-4" style="padding:0px;">
-                        <img style="width:70%; height:auto;" src="img/Hanging_items.jpg"/>
-                    </div>
-                    <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
-                        <h3 class="service_header">Hanging items</h3>
-                        <p>Place pictures. Set Shelves. Mount frames. Fix frames.</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="row" style="padding:10px;">
-                <a href="#" style="color:black; text-decoration:none;">
-                    <div class="col-xs-4" style="padding:0px;">
-                        <img style="width:70%; height:auto;" src="img/ac.jpg"/>
-                    </div>
-                    <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
-                        <h3 class="service_header">A/C installation</h3>
-                        <p>Or uninstallation. Depends on the season, I guess.</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="row" style="padding:10px;">
-                <a href="#" style="color:black; text-decoration:none;">
-                    <div class="col-xs-4" style="padding:0px;">
-                        <img style="width:70%; height:auto;" src="img/Furniture.jpg"/>
-                    </div>
-                    <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
-                        <h3 class="service_header">Furniture assembly</h3>
-                        <p>Is that a 3D puzzle, or sofa? Let us put it together for you.</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="row" style="padding:10px;">
-                <a href="#" style="color:black; text-decoration:none;">
-                    <div class="col-xs-4" style="padding:0px;">
-                        <img style="width:70%; height:auto;" src="img/Moving.jpg"/>
-                    </div>
-                    <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
-                        <h3 class="service_header">Moving help</h3>
-                        <p>We'll bring the muscle to pack and load. Van not included.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="hidden_menu">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <a href="" style="color:black; text-decoration: none;">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <strong>Make a Booking</strong>
+
+        <div class="container" >
+            <div id="servicelist" style="background-color:#EEEEEE">
+                <div style="text-align:center; background-color:white; padding-bottom:5px; border-top-left-radius: 5px; border-top-right-radius: 5px; ">
+                    <img style="width:12%; height:auto; margin-top:-6%;" src="img/icon2.png" />
+                </div>
+                
+                <div class="row" style="padding:10px;">
+                    <a href="location.html" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/Hanging_items.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Hanging items</h4>
+                            <p>Place pictures. Set Shelves. Mount frames. Fix frames.</p>
+                        </div>
                     </a>
-                </li>
-                <li class="list-group-item">
-                    <a href=""  style="color:black; text-decoration: none;">
-                        <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <strong>Apply Promo Code</strong>
+                </div>
+                <div class="row" style="padding:10px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/ac.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">A/C installation</h4>
+                            <p>Or uninstallation. Depends on the season, I guess.</p>
+                        </div>
                     </a>
-                </li>
-                <li class="list-group-item">
-                    <a href=""  style="color:black; text-decoration: none;">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <strong>Help</strong>
+                </div>
+                <div class="row" style="padding:10px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/Furniture.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Furniture assembly</h4>
+                            <p>Is that a 3D puzzle, or sofa? Let us put it together for you.</p>
+                        </div>
                     </a>
-                </li>
-                <li class="list-group-item">
-                    <a href=""  style="color:black; text-decoration: none;">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <strong>Login</strong>
+                </div>
+                <div class="row" style="padding:10px;  border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/Moving.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Moving help</h4>
+                            <p>We'll bring the muscle to pack and load. Van not included.</p>
+                        </div>
                     </a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
         
         <script>
             var toggled = false;
             $( document ).ready(function() {
                 console.log( "ready!" );
-                $('#hidden_menu').css({'visibility': 'hidden'});
-                $( '#hidden_menu' ).toggle( 'slide', {direction : 'right'} );
             });
-            
-            function toggleMenu(){
-                $('#hidden_menu').css({'visibility': 'visible'});
-                $( '#hidden_menu' ).toggle( 'slide', {direction : 'right'} );
-                console.log( "Menu Toggled!" );
-                toggled = ! toggled;
-            }
         </script>
     </body>
-    
 </head>
