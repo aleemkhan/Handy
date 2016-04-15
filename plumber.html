@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Abdul Aleem Khan">
+        
+        <title>Handy</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <style>
+            @font-face {
+                font-family: Lato;
+                src: url(fonts/Lato/Lato-Regular.ttf);
+            }
+            .service_header{
+                margin:0px;
+                margin-top:2px;
+            }
+            .container{
+                background-color:#EEEEEE;
+                width:100%;
+                padding:0px;
+            }
+            .navbar{
+                margin:0px;
+                z-index:0;
+                border-width:0px;
+                position:relative;
+            }
+            
+            .navbar-header{
+                background-color:#FF5C5C;
+                width:100%;
+                margin-left:0px;
+                margin-right:0px;
+                padding-left:10px;
+                padding-right:10px;
+            }
+            
+            .container > .navbar-header{
+                margin-left:0px;
+                margin-right:0px;
+                position:relative;
+            }
+            html, body{
+                background-color:#EEEEEE;
+                font-family: Lato;
+            }
+            
+            #hidden_menu{
+                position:fixed;
+                top:0px;
+                width:75%;
+                min-height:100%;
+                z-index:1000;
+                background-color:white;
+                right:0px;
+                margin-top:49px;
+            }
+            .row{
+                margin:0px;
+                background-color:white; 
+                padding:0px;
+                overflow: hidden;
+                border-bottom:1px solid #CECECE;
+            }
+            .row:hover{
+                background-color: #EAEAEA;
+            }
+            
+            #servicelist{
+                border-radius: 5px;
+                margin-bottom:15px;
+                z-index:2500;
+                position:absolute;  
+                margin-top:-40px; 
+                margin-left:10px; 
+                margin-right:10px; 
+            }
+            
+            li> a{
+                text-decoration: none;
+                color:black;
+            } 
+            
+            p{
+                color: #909090;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" style="position:relative;top:9px;left:0px;">
+                        <img style="height:30px; width:25px;" src="img/back-icon.png" />
+                    </a>
+                    <h4 class="text-center muted" style="position:relative; color:white; margin:0px; padding:0px; top:9px;">
+                        Plumber
+                    </h4>
+                    <h2 class="text-center" style="color:white; padding:20px; margin-top:0px; margin-bottom:50px;">
+                        Highly rated pros will get everything flowing again.
+                    </h2>
+                </div>
+                
+            </div>
+        </nav>
+
+        <div class="container" >
+            <div id="servicelist" style="background-color:#EEEEEE">
+                <div style="text-align:center; background-color:white; padding-bottom:5px; border-top-left-radius: 5px; border-top-right-radius: 5px; ">
+                    <img style="width:12%; height:auto; margin-top:-6%;" src="img/icon3.png" />
+                </div>
+                
+                <div class="row" style="padding:10px;">
+                    <a href="location.html" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/darins.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Drains</h4>
+                            <p>An expert will get your drains unclogged in no time.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="padding:10px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/faucet.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Faucets</h4>
+                            <p>Upgrade to the fancy nozzle, or hust stop a leak.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="padding:10px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/toilets.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Toilets</h4>
+                            <p>We'll do the dirty work so that you don't have to.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="padding:10px;  border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/garbages.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Garbage Disposals</h4>
+                            <p>Disposal of that mesh stainer and start with a clean sink.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="padding:10px;  border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                    <a href="#" style="color:black; text-decoration:none;">
+                        <div class="col-xs-4" style="padding:0px;">
+                            <img style="width:70%; height:auto;" src="img/garbages.jpg"/>
+                        </div>
+                        <div class="col-xs-7 col-xs-offset-1" style="padding:0px;">
+                            <h4 class="service_header">Something Else</h4>
+                            <p>Have something more specific in mind? Tell us!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var toggled = false;
+            $( document ).ready(function() {
+                console.log( "ready!" );
+            });
+        </script>
+    </body>
+</head>
